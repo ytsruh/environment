@@ -11,6 +11,7 @@ Use homebrew/brew where possible
 - neovim [https://neovim.io/]
 - Go [https://go.dev/]
 - Node/NVM [https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating]
+- Bun [https://bun.sh/]
 
 ## Using GNU Stow
 Stow works by creating symlinks between a custom folder (dotfiles) in your main directory & the main directory itself. Files created in the dotfiles directory can be symlinked to the the same location in the main directory by running:
