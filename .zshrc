@@ -145,5 +145,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
-# deno
-. "/Users/chrishurst/.deno/env"
+# Added by Windsurf
+export PATH="/Users/chrishurst/.codeium/windsurf/bin:$PATH"
+
+# Custom script to remember you removed node
+alias node='cowsay "You removed node & npm you melon. Please use bun"'
+alias npm='cowsay "You removed node & nvm you melon. Please use bun"'
