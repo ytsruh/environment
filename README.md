@@ -10,7 +10,6 @@ Use homebrew/brew where possible
 - mytils [https://github.com/ytsruh/mytils]
 - neovim [https://neovim.io/]
 - Go [https://go.dev/]
-- Node/NVM [https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating]
 - Bun [https://bun.sh/]
 
 ## Using GNU Stow
