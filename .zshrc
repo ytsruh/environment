@@ -82,35 +82,6 @@ plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -121,29 +92,23 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 cowsay "Welcome back, Chris!"
 echo "\n"
 
-# Add deno completions to search path
+# Add zsh completions to search path
 if [[ ":$FPATH:" != *":/Users/chrishurst/.zsh/completions:"* ]]; then export FPATH="/Users/chrishurst/.zsh/completions:$FPATH"; fi
-export NVM_DIR="/Users/chrishurst/.nvm"
 
 # Add Docker Desktop for Mac (docker)
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-alias air='$(go env GOPATH)/bin/air'
-autoload -U compinit
-compinit -i
-
-# bun completions
-[ -s "/Users/chrishurst/.bun/_bun" ] && source "/Users/chrishurst/.bun/_bun"
-
 # bun
+[ -s "/Users/chrishurst/.bun/_bun" ] && source "/Users/chrishurst/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Go
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
+alias air='$(go env GOPATH)/bin/air'
+autoload -U compinit
+compinit -i
 
 # Added by Windsurf
 export PATH="/Users/chrishurst/.codeium/windsurf/bin:$PATH"
