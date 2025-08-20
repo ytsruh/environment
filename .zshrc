@@ -48,3 +48,6 @@ PATH="$GOPATH/bin:$PATH"
 alias air='$(go env GOPATH)/bin/air'
 autoload -U compinit
 compinit -i
+
+# opencode
+export PATH=/Users/chrishurst/.opencode/bin:$PATH
