@@ -37,6 +37,7 @@
     "emmet": true,
     "make": true,
     "tokyonight": true,
-    "biome": true
+    "biome": true,
+    "catppuccin-icons": true
   }
 }
