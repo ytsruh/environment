@@ -7,46 +7,65 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Catppuccin Macchiato",
-  "agent": {
-    "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    },
-    "default_profile": "write",
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    }
-  },
-  "formatter": {
-    "language_server": {
-      "name": "biome"
-    }
-  },
-  "code_actions_on_format": {
-    "source.fixAll.biome": true,
-    "source.organizeImports.biome": true
-  },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "soft_wrap": "bounded",
-  "preferred_line_length": 120,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Tokyo Night Storm"
-  },
-  "auto_install_extensions": {
-    "html": true,
-    "dockerfile": true,
-    "docker-compose": false,
-    "sql": true,
-    "lua": true,
-    "emmet": true,
-    "make": true,
-    "tokyonight": true,
-    "biome": true,
-    "catppuccin-icons": true
-  }
+	"icon_theme": "Catppuccin Macchiato",
+	"agent": {
+		"inline_assistant_model": {
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4"
+		},
+		"default_profile": "write",
+		"default_model": {
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4"
+		}
+	},
+	"tab_size": 4,
+	"toolbar": {
+		"breadcrumbs": false,
+		"quick_actions": false
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false
+	},
+	"hard_tabs": true,
+	"languages": {
+		"Go": {
+			"tab_size": 4,
+			"formatter": "auto",
+			"format_on_save": "on"
+		},
+		"JavaScript": {
+			"tab_size": 2
+		}
+	},
+	"formatter": {
+		"language_server": {
+			"name": "biome"
+		}
+	},
+	"code_actions_on_format": {
+		"source.fixAll.biome": true,
+		"source.organizeImports.biome": true
+	},
+	"ui_font_size": 16,
+	"buffer_font_size": 16,
+	"soft_wrap": "bounded",
+	"preferred_line_length": 160,
+	"theme": {
+		"mode": "system",
+		"light": "One Light",
+		"dark": "Tokyo Night Storm"
+	},
+	"auto_install_extensions": {
+		"html": true,
+		"dockerfile": true,
+		"docker-compose": false,
+		"sql": true,
+		"lua": true,
+		"emmet": true,
+		"make": true,
+		"tokyonight": true,
+		"biome": true,
+		"catppuccin-icons": true
+	}
 }
