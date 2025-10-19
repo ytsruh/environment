@@ -3,3 +3,4 @@ font-size = 16
 theme = tokyonight
 # add keybinding for quick terminal to ctrl + ` (backtick)
 keybind = global:ctrl+grave_accent=toggle_quick_terminal
+background-opacity = 0.7
