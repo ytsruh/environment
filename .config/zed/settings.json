@@ -13,10 +13,10 @@
 			"provider": "zed.dev",
 			"model": "claude-sonnet-4"
 		},
-		"default_profile": "write",
+		"default_profile": "ask",
 		"default_model": {
 			"provider": "zed.dev",
-			"model": "claude-sonnet-4"
+			"model": "claude-sonnet-4-5"
 		}
 	},
 	"tab_size": 4,
