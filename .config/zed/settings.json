@@ -19,6 +19,12 @@
 			"model": "claude-sonnet-4-5"
 		}
 	},
+	"agent_servers": {
+		"OpenCode": {
+			"command": "opencode",
+			"args": ["acp"]
+		}
+	},
 	"tab_size": 4,
 	"toolbar": {
 		"breadcrumbs": false,
