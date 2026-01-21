@@ -19,13 +19,7 @@
 			"model": "claude-sonnet-4-5"
 		}
 	},
-	"agent_servers": {
-		"OpenCode": {
-			"command": "opencode",
-			"args": ["acp"]
-		}
-	},
-	"tab_size": 4,
+	"tab_size": 2,
 	"toolbar": {
 		"breadcrumbs": false,
 		"quick_actions": false
@@ -36,12 +30,50 @@
 	"hard_tabs": true,
 	"languages": {
 		"Go": {
-			"tab_size": 4,
+			"tab_size": 2,
 			"formatter": "auto",
 			"format_on_save": "on"
 		},
 		"JavaScript": {
 			"tab_size": 2
+		},
+		"Templ": {
+			"tab_size": 2,
+			"formatter": {
+				"external": {
+					"command": "templ",
+					"arguments": ["fmt", "-stdin-filepath", "{buffer_path}"]
+				}
+			},
+			"format_on_save": "on",
+			"language_servers": [
+				"templ",
+				"tailwindcss-language-server",
+				"vscode-html-language-server",
+				"emmet-language-server"
+			],
+			"inlay_hints": {
+				"enabled": true
+			}
+		}
+	},
+	"lsp": {
+		"emmet-language-server": {
+			"settings": {
+				"includeLanguages": {
+					"templ": "html"
+				}
+			}
+		},
+		"tailwindcss-language-server": {
+			"settings": {
+				"includeLanguages": {
+					"templ": "html"
+				},
+				"experimental": {
+					"classRegex": ["class=\"([^\"]*)\"", "className=\"([^\"]*)\""]
+				}
+			}
 		}
 	},
 	"formatter": {
@@ -67,7 +99,6 @@
 		"dockerfile": true,
 		"docker-compose": false,
 		"sql": true,
-		"lua": true,
 		"emmet": true,
 		"make": true,
 		"tokyonight": true,
