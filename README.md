@@ -8,6 +8,7 @@ Notes & setup guide
 - neovim [https://neovim.io/]
 - Go [https://go.dev/]
 - Bun [https://bun.sh/]
+- OpenCode [https://opencode.ai]
 
 ## Using GNU Stow
 Stow works by creating symlinks between a custom folder (dotfiles) in your main directory & the main directory itself. Files created in the dotfiles directory can be symlinked to the the same location in the main directory by running:
