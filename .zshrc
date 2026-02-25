@@ -28,8 +28,12 @@ cowsay "Welcome back, Chris!"
 echo "\n"
 
 # Uninstalled Node warning
-alias npm='echo "⚠️  You'\''ve uninstalled Node & NPM. Use Bun. ⚠️"'
-alias nvm='echo "⚠️  You'\''ve uninstalled NVM. Use Bun. ⚠️"'
+#alias npm='echo "⚠️  You'\''ve uninstalled Node & NPM. Use Bun. ⚠️"'
+#alias nvm='echo "⚠️  You'\''ve uninstalled NVM. Use Bun. ⚠️"'
+# NPM & NVM Settings if needed
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add zsh completions to search path
 if [[ ":$FPATH:" != *":/Users/chrishurst/.zsh/completions:"* ]]; then export FPATH="/Users/chrishurst/.zsh/completions:$FPATH"; fi

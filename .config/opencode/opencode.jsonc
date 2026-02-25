@@ -1,6 +1,6 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"enabled_providers": ["opencode", "openrouter", "google"],
+	"enabled_providers": ["opencode", "opencode-go", "openrouter", "google"],
 	"plugin": ["opencode-gemini-auth@latest"],
 	// Theme configuration
 	"theme": "tokyonight",
@@ -39,6 +39,18 @@
 				"edit": false
 			},
 			"prompt": "You are a security expert. Focus on identifying potential security issues.\nLook for:\n- Input validation vulnerabilities\n- Authentication and authorization flaws\n- Data exposure risks\n- Dependency vulnerabilities\n- Configuration security issues"
+		}
+	},
+	// MCP Servers
+	"mcp": {
+		"pencil": {
+			"command": [
+				"/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+				"--app",
+				"desktop"
+			],
+			"enabled": true,
+			"type": "local"
 		}
 	}
 }
