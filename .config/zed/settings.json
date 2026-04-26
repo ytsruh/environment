@@ -7,9 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-	"icon_theme": "Catppuccin Macchiato",
+	"cli_default_open_behavior": "new_window",
+ "project_panel": {
+  "dock": "left"
+ },
+ "outline_panel": {
+  "dock": "left"
+ },
+ "collaboration_panel": {
+  "dock": "left"
+ },
+ "git_panel": {
+  "dock": "left"
+ },
+ "icon_theme": "Catppuccin Macchiato",
 	"agent": {
-		"inline_assistant_model": {
+		"sidebar_side": "right",
+  "dock": "right",
+  "inline_assistant_model": {
 			"provider": "zed.dev",
 			"model": "claude-sonnet-4"
 		},
@@ -35,7 +50,15 @@
 			"format_on_save": "on"
 		},
 		"JavaScript": {
-			"tab_size": 2
+			"tab_size": 2,
+			"formatter": "auto",
+			"format_on_save": "on"
+		},
+		"TypeScript": {
+			"tab_size": 2,
+			"language_servers": ["tsgo", "vtsls"],
+			"formatter": "auto",
+			"format_on_save": "on"
 		},
 		"Templ": {
 			"tab_size": 2,
@@ -103,6 +126,7 @@
 		"make": true,
 		"tokyonight": true,
 		"biome": true,
-		"catppuccin-icons": true
+		"catppuccin-icons": true,
+		"tsgo": true
 	}
 }
