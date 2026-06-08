@@ -55,6 +55,3 @@ compinit -i
 
 # opencode
 export PATH=/Users/chrishurst/.opencode/bin:$PATH
-
-# Zig
-export PATH=$PATH:~/zig
