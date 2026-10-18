@@ -1,39 +1,32 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"enabled_providers": ["opencode", "opencode-go", "openrouter"],
-	"plugin": [],
-	"provider": {},
-	"autoupdate": true,
-	"permission": {
-  	"read": {
-      "*": "allow",
-      "*.env": "deny",
-      "*.env.*": "deny",
-      "*.env.example": "allow"
-    },
-		"edit": "allow",
-		"glob":"allow",
-		"grep":"allow",
-		"skill":"allow",
-		"webfetch":"allow",
-		"bash": {
-	      "*": "ask",
-	      "git *": "allow",
-	      "grep *": "allow",
-	      "make *": "allow"
-	  },
-	},
-	// Custom agents
-	"agent": {
-		"docs-writer": {
-			"description": "Writes and maintains project documentation",
-			"mode": "subagent",
-			"tools": {
-				"bash": false
-			},
-			"prompt": "You are a technical writer. Create clear, comprehensive documentation.\nFocus on:\n- Clear explanations\n- Proper structure\n- Code examples\n- User-friendly language"
-		}
-	},
+	"enabled_providers": ["opencode", "opencode-go"],
+	"plugins": [
+    {
+      "package": "./plugins/notification",
+      "options": { "enabled": true }
+    }
+  ],
+	"providers": {},
+	"update": "auto",
+	"permissions": [
+		{ "action": "external_directory", "resource": "*", "effect": "ask" },
+		{ "action": "read", "resource": "*", "effect": "allow" },
+		{ "action": "read", "resource": "*.env", "effect": "deny" },
+		{ "action": "read", "resource": "*.env.*", "effect": "deny" },
+		{ "action": "read", "resource": "*.env.example", "effect": "allow" },
+		{ "action": "edit", "resource": "*", "effect": "allow" },
+		{ "action": "glob", "resource": "*", "effect": "allow" },
+		{ "action": "grep", "resource": "*", "effect": "allow" },
+		{ "action": "skill", "resource": "*", "effect": "allow" },
+		{ "action": "webfetch", "resource": "*", "effect": "allow" },
+		{ "action": "shell", "resource": "*", "effect": "ask" },
+		{ "action": "shell", "resource": "git *", "effect": "allow" },
+		{ "action": "shell", "resource": "grep *", "effect": "allow" },
+		{ "action": "shell", "resource": "make *", "effect": "allow" }
+	],
 	// MCP Servers
-	"mcp": {}
+	"mcp": {
+		"servers": {}
+	}
 }

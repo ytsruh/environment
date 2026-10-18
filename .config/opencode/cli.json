@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "tokyonight"
+  },
+  "keybinds": {
+    // Tab cycles agents (V1 behavior). Note: this takes Tab from
+    // prompt.autocomplete.complete, so accept autocomplete items with Return.
+    "agent.cycle": "tab",
+    "agent.cycle.reverse": "shift+tab"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "terminal": {
+    "title": true
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": true,
+    "thinking": "show"
+  },
+  "animations": true
+}
